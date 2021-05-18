@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class StudentManager {
+public class StudentManager { /*8 StudentManager类，管理所有Student*/
     public  List<Student> studentList=new ArrayList<>();
     public void printf(){
         System.out.println("请选择操作                    ");
@@ -48,7 +48,7 @@ public class StudentManager {
         System.out.println("请输入要查找人的姓名");
         String name = scanner.nextLine();
         for (int i = 0; i < studentList.size(); i++) {
-            if(name.equals(studentList.get(i).getName())){
+            if(name.equals(studentList.get(i).getName())){ /*4 5 查找人名的判断结果，如果找到就输出人物信息*/
                 System.out.println(studentList.get(i).toString());
                 break;
             }else if(i==(studentList.size()-1)){
@@ -62,7 +62,7 @@ public class StudentManager {
         System.out.println("请输入要删除人的姓名");
         String name = scanner.nextLine();
         for (int i = 0; i < studentList.size(); i++) {
-            if(name.equals(studentList.get(i).getName())){
+            if(name.equals(studentList.get(i).getName())){  /*4 5 删除此人的查找结果*/
                 studentList.remove(i);
                 break;
 
@@ -86,7 +86,7 @@ public class StudentManager {
         String name = scanner.nextLine();
         String birDate = scanner.nextLine();
         for (int i = 0; i < studentList.size(); i++) {
-            if(name.equals(studentList.get(i).getName())){
+            if(name.equals(studentList.get(i).getName())){ /*4 5 修改人的查找结果*/
                 studentList.get(i).setBirDate(birDate);
                 break;
 
@@ -108,8 +108,8 @@ public class StudentManager {
         System.out.println("请输入正确的操作");
     }
 
-    public  void App(){
-        while (true){
+    public  void App(){ /*8 App方法，负责程序的整个控制流程 */
+        while (true){ /*4 5 当输入操作正确的时候，依次执行操作*/
             Scanner scanner = new Scanner(System.in);
             printf();
             int a=scanner.nextInt();
@@ -135,4 +135,4 @@ public class StudentManager {
 
 
 
-}
+}/* 6 {对应line3*/

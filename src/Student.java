@@ -1,10 +1,16 @@
-public class Student {
+import java.io.IOException;
+import java.util.Date;
+import java.util.logging.FileHandler;
+import java.util.logging.Formatter;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+public class Student { /*8 Student类 */
 
-    private int ID;
+    private int ID; /* 7 nID*/
     private String name;
     private String birDate;
-    private boolean gender;
-
+    private boolean gender;/*7 bGender*/
     public int getID() {
         return ID;
     }
@@ -49,6 +55,7 @@ public class Student {
 
     @Override
     public String toString() {
+
         return "Student{" +
                 "ID=" + ID +
                 ", name='" + name + '\'' +
@@ -56,4 +63,4 @@ public class Student {
                 ", gender=" + (gender==true?"男":"女") +
                 '}';
     }
-}
+}/* 6  { 对应line1*/
